@@ -1,4 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>浚宇的博客</title><link>https://blog.junyu.io/</link><description>Recent content on 浚宇的博客</description><generator>Hugo -- 0.142.0</generator><language>zh-cn</language><lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.junyu.io/index.xml" rel="self" type="application/rss+xml"/><item><title>博客失踪人口回归</title><link>https://blog.junyu.io/posts/2025-01-24-come-back-again/</link><pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate><guid>https://blog.junyu.io/posts/2025-01-24-come-back-again/</guid><description>&lt;p>2025年1月17日，我尝试本地重新开始深度使用Markdown，一开始是想用md做可视化的幻灯给自己看，后面开始研究长文档的使用，意识到渲染的复杂性，开始检索Markdown的方言有多复杂的时候，冥冥之中，搜索到益辉老师的&lt;a href="https://yihui.org/cn/2017/08/markdown-flavors/">混乱的 Markdown 世界&lt;/a>这篇文章。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>浚宇的博客</title><link>https://blog.junyu.io/</link><description>Recent content on 浚宇的博客</description><generator>Hugo -- 0.142.0</generator><language>zh-cn</language><lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.junyu.io/index.xml" rel="self" type="application/rss+xml"/><item><title>图床问题解决实录</title><link>https://blog.junyu.io/posts/2025-01-26-picbed-issue/</link><pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate><guid>https://blog.junyu.io/posts/2025-01-26-picbed-issue/</guid><description>&lt;p>今天折腾博客的图片如何的展示，经历了&lt;strong>山穷水复疑无路，柳暗花明又一村&lt;/strong>，前两个半小时采用过去解决问题的模式，后期快速的做调整，过程值得记录。&lt;/p>
+&lt;h2 id="过程记录">过程记录&lt;/h2>
+&lt;p>早上我尝试恢复一些过去散落各地的文章汇总到独立博客中，遇到了下图的问题：
+&lt;img loading="lazy" src="https://picbed-blog.oss-rg-china-mainland.aliyuncs.com/2025-01-26-md-pic-url-not-work.png">&lt;/p>
+&lt;p>过去博客中的图片，不能展示在页面上。我想尝试把图片显示在独立博客中，问题其实解决起来应该很简单，把图片放到github的独立博客的目录之下，很快就能解决。&lt;/p>
+&lt;p>这种解法不够完美，如果一个博客长期输出，会产生大量的图片，github免费版本图片的数量是有限制的。&lt;/p>
+&lt;p>我希望更优雅的解决问题，自己一直在用一款小众写作软件&lt;strong>写拉松&lt;/strong>写作，我的图片也都存储在软件的云端。我就想当然的直接把图片链接复制过来，结果无法显示。&lt;/p>
+&lt;p>当发现无法显示的时候，我就想着一些通用的办法来解决问题。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>首先想到用Google做搜索，看了一些之后，初步的锚定可能出现问题的几个点，然后我就开始尝试，效果始终不理想。
+&lt;img loading="lazy" src="https://picbed-blog.oss-rg-china-mainland.aliyuncs.com/2025-01-26-google-search-md-url-solution.png">
+折腾过博客的同学应该会很有感觉，一旦你研究一个问题，始终没有解法会非常容易慌乱，在AI没有出现的时代，Google让你的问题范围越缩越小，可是始终找不到解决方案会很崩溃，然后陷入一种我称之为&lt;strong>上瘾but无能抓狂&lt;/strong>的状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>现在有了AI的加持，我又尝试着用AI来进行搜索，AI的确是一个解决问题的好帮手，如果你找不到问题的关键，AI给出越来越多的细节，它也只会让事情越来越乱，陷入无尽的时间黑洞当中。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="找到问题的本质">找到问题的本质&lt;/h2>
+&lt;p>经过这几年的历练，我告诉自己，”要调整自己做这种不确定性探索的模式“，从更加本质的方向思考探索，否则“时间黑洞”会被自己的焦虑和上瘾状态无限制的放大，就像在一个迷宫当中，不断的重复无法走通的死胡同。“无效的努力”会更加让人沮丧和抓狂。&lt;/p>
+&lt;p>问题的本质其实还是几个方面，要么是渲染的问题，要么是格式的问题，语法的问题，要么就是图床的问题。&lt;/p>
+&lt;p>我开始逐个进行尝试和搜索，然后会发现呃，当你找到一些比较，本来我想从本质的方向去入手解决问题，但是效果不太好。
+我开始看&lt;a href="https://gohugo.io/getting-started/configuration-markup/">Configure markup | Hugo&lt;/a>和&lt;a href="https://gohugo.io/content-management/image-processing/">Image processing | Hugo&lt;/a>官方文档的内容。&lt;/p>
+&lt;p>突然，我想起来&lt;strong>交叉验证&lt;/strong>大法。下面这张图片让我豁然开朗，测试了另一个图床工具发现有效，说明和使用的图床是有很大的关系。
+&lt;img loading="lazy" src="https://picbed-blog.oss-rg-china-mainland.aliyuncs.com/2025-01-26-md-url-issue-html-element.png">&lt;/p>
+&lt;p>我直接问了软件的创作者，豁然开朗。&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://picbed-blog.oss-rg-china-mainland.aliyuncs.com/2025-01-26-ask-Writeathon-picbed.JPEG">&lt;/p>
+&lt;p>hugo也好，md也罢，都没问题，因为从源头上，这个内容创作软件本身使用的七牛云的图床服务本身就不支持公共域的图片读取功能。&lt;/p>
+&lt;h2 id="图床设置工作流">图床设置工作流&lt;/h2>
+&lt;p>最终，我选择了阿里云+picgo的传统模式，阿里云用付费版本，初步来看费用不会太高。未来很可能会根据费用的情况做进一步的调整，解决问题的流程，是进行小步迭代的尝试。&lt;/p>
+&lt;p>先跑通整个逻辑，去测试手机端、电脑端在各种各种不同的场景下，是否能够快速的上传图片。我初步找到了一个80分的方案，这个过程的优化需要经历时间周期，目前就是探索到了这样一个阶段。&lt;/p>
+&lt;h2 id="对我的启发">对我的启发&lt;/h2>
+&lt;p>回顾整个过程，我有两个多小时探索的过程，从结果来看是无效的。&lt;/p>
+&lt;p>从生命成长的历程，从自我的反思维度来讲，给我提了个醒，过去的那种无效模式，会花很多时间却不一定出效果，我们需要采用更加有效的更直接本质的方法，让我们抓到问题的关键，然后一击致命。&lt;/p>
+&lt;p>另外一点呢，我们的工具流，尽可能选择简单高效的解决方案，不要追求完美，在长时间周期可用的前提下，80分的选择也是一个当下可以接受的版本，随着使用周期的延长，未来会有新的思路和解决方案，那到时候再继续去做研究。请为自己保持开放性的可能。&lt;/p>
+&lt;h2 id="时间花销">时间花销&lt;/h2>
+&lt;p>作为时间记录爱好者，每一次的折腾，每一次的时间账单，是我更关注的。&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://picbed-blog.oss-rg-china-mainland.aliyuncs.com/2025-01-26-time-record-about-picbed-issue-fixed-total-time.jpeg">&lt;/p>
+&lt;ul>
+&lt;li>2h31m 的探索，最终发现根本问题所在&lt;/li>
+&lt;li>1h36m 形成初版的图床使用版本：阿里云 oss + picgo + 阿里云手机端 实现多端同步的图床上传&lt;/li>
+&lt;li>56m 本文快写慢改&lt;/li>
+&lt;/ul>
+&lt;p>总时间大约有5小时，今天，春节前的最后一天，都耗在这里了，必须值得写篇文章纪念一下！！！&lt;/p>
+&lt;h2 id="折腾记录">折腾记录&lt;/h2>
+&lt;p>未来关于图床的折腾，还会在这里做记录，在探索过程中，还得到了各位赛博朋友的内容支持，在这里简单罗列，未来可能得折腾方向也简单记录一下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.pseudoyu.com/zh/">Pseudoyu&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://vccv.cc/">月青悠 | 青青子衿，悠悠我心&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://licolnlee.icu/post/2020/0512/">别走啊，官人 _(:з」∠)_&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.cnblogs.com/liumylay">Serendiplay - 博客园&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>考虑对图片做进一步的处理：比如加水印、图片的排版、其他处理设置&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://vccv.cc/article/hugo-img-watermark.html">Hugo图片优化：Fancybox、Webp和水印 | 月青悠&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://adityatelange.in/blog/hugo-watermarking-images/">Watermarking images with HUGO | Aditya Telange&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.yuweihung.com/posts/2021/hugo-blog-picture/">Hugo 博客插入图片的方法 | Cassius&amp;rsquo;s Blog&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="changelog">ChangeLog&lt;/h2>
+&lt;p>2025-01-26 快写慢改&lt;/p></description></item><item><title>博客失踪人口回归</title><link>https://blog.junyu.io/posts/2025-01-24-come-back-again/</link><pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate><guid>https://blog.junyu.io/posts/2025-01-24-come-back-again/</guid><description>&lt;p>2025年1月17日，我尝试本地重新开始深度使用Markdown，一开始是想用md做可视化的幻灯给自己看，后面开始研究长文档的使用，意识到渲染的复杂性，开始检索Markdown的方言有多复杂的时候，冥冥之中，搜索到益辉老师的&lt;a href="https://yihui.org/cn/2017/08/markdown-flavors/">混乱的 Markdown 世界&lt;/a>这篇文章。&lt;/p>
 &lt;p>我是一个看到独立博客，特别是页面简介，内容质量符合胃口的时候，走不动路的人。恰好益辉老师的博客内容非常之多，友链也非常多，并且很多的网友还在持续的更新博客。另外&lt;a href="https://cosx.org/members/#yihui">统计之都&lt;/a>也深得我心。&lt;/p>
 &lt;p>这仿佛开启了我多年尘封的回忆，也启发了我另一个问题，为什么我不能继续写博客呢？&lt;/p>
 &lt;h2 id="我和独立博客">我和独立博客&lt;/h2>
@@ -21,6 +80,8 @@
 &lt;p>有一些没变：依然对自我表达、理性表达保持热爱。依然崇尚独立精神。依然会被这些吸引。&lt;/p>
 &lt;p>在看到独立博客，并且沿着相关的一些博友的赛博朋友的网线找到了更多朋友。我意识到，其实每一个人都会有自己的选择，每个人也都在坚守，用自己的方式去做着自我表达。&lt;/p>
 &lt;p>愿意花这么多时间去折腾独立博客的人，往往都有着一颗自我表达的意愿，有一颗希望保持独立思考的灵魂。都想成为自己一个不被他人所定义的自己。&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://picbed-blog.oss-rg-china-mainland.aliyuncs.com/2025-01-26-jianshu-profile.png">&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://picbed-blog.oss-rg-china-mainland.aliyuncs.com/2025-01-26-jianshu-lock-article.png">&lt;/p>
 &lt;h2 id="我的期待和方向">我的期待和方向&lt;/h2>
 &lt;p>走起来，走一步看一步。
 可以慢，但不要停。&lt;/p>
